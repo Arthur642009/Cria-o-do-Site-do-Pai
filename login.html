@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#f7f5f0" />
+    <title>Entrar — Morada</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="login-page">
+    <header class="topbar">
+      <a class="brand" href="index.html"
+        ><span class="brand-mark">TM</span> Terra & Imóveis<span class="brand-dot"
+          >.</span
+        ></a
+      ><a class="back-link" href="index.html">← Voltar para o início</a>
+    </header>
+    <main class="login-layout">
+      <div class="login-photo">
+        <img
+          src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1300&q=85"
+          alt="Casa moderna com jardim e luz natural"
+        />
+        <div class="photo-caption">
+          <span class="eyebrow">MORAR BEM COMEÇA AQUI</span>
+          <h2>Seu próximo<br />capítulo espera<br />por você.</h2>
+        </div>
+      </div>
+      <section class="login-panel">
+        <div class="login-form-wrap">
+          <span class="eyebrow">BEM-VINDO DE VOLTA</span>
+          <h1>Que bom ter<br />você por aqui.</h1>
+          <p class="form-intro">Entre na sua conta para continuar.</p>
+          <form id="login-form">
+            <label class="form-label" for="email">E-mail</label
+            ><input
+              class="text-input"
+              id="email"
+              name="email"
+              type="email"
+              placeholder="voce@email.com"
+              autocomplete="username"
+              required
+            /><label class="form-label" for="password">Senha</label>
+            <div class="password-wrap">
+              <input
+                class="text-input"
+                id="password"
+                name="password"
+                type="password"
+                placeholder="Sua senha"
+                autocomplete="current-password"
+                required
+              /><button
+                type="button"
+                id="toggle-password"
+                aria-label="Mostrar senha"
+              >
+                ◉
+              </button>
+            </div>
+            <div class="form-options">
+              <label class="remember"
+                ><input type="checkbox" /> Manter conectado</label
+              ><a href="#" id="forgot-password">Esqueceu a senha?</a>
+            </div>
+            <p id="login-error" class="error-message" role="alert"></p>
+            <button class="primary-button" type="submit">
+              Entrar na minha conta <span>↗</span>
+            </button>
+          </form>
+          <div class="login-note">
+            <span class="lock-icon">♙</span
+            ><span>Acesso seguro e protegido</span>
+          </div>
+          <p class="admin-hint">
+            Área exclusiva para a equipe?
+            <a href="#" id="admin-hint">Acesso administrativo</a>
+          </p>
+        </div>
+        <div class="login-footer">
+          © 2025 Morada Imóveis <span>Privacidade &nbsp; · &nbsp; Ajuda</span>
+        </div>
+      </section>
+    </main>
+    <script src="auth.js"></script>
+  </body>
+</html>

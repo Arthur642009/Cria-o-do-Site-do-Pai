@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f7f5f0" />
+    <title>Detalhes do imóvel — Terra & Imóveis</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="commerce.css" />
+    <link rel="stylesheet" href="detail.css" />
+  </head>
+  <body>
+    <header class="topbar detail-topbar">
+      <a class="brand" href="index.html"
+        ><span class="brand-mark">TM</span> Terra &amp; Imóveis<span
+          class="brand-dot"
+          >.</span
+        ></a
+      >
+      <a class="login-link" href="index.html#imoveis"
+        >← Voltar para os imóveis</a
+      >
+    </header>
+    <main class="detail-page">
+      <nav class="detail-breadcrumb">
+        <a href="index.html">Início</a><span>/</span
+        ><a href="index.html#imoveis">Imóveis</a><span>/</span
+        ><span id="crumb-title">Detalhes</span>
+      </nav>
+      <section class="detail-gallery" aria-label="Fotos do imóvel">
+        <div class="gallery-main">
+          <img id="main-photo" alt="Foto do imóvel" /><span
+            class="gallery-counter"
+            id="gallery-counter"
+          ></span
+          ><button
+            class="gallery-next"
+            id="gallery-next"
+            type="button"
+            aria-label="Próxima foto"
+          >
+            ›</button
+          ><button
+            class="gallery-prev"
+            id="gallery-prev"
+            type="button"
+            aria-label="Foto anterior"
+          >
+            ‹
+          </button>
+        </div>
+        <div class="gallery-thumbs" id="gallery-thumbs"></div>
+      </section>
+      <div class="detail-layout">
+        <article class="detail-info">
+          <span class="detail-eyebrow" id="property-kind"></span>
+          <h1 id="property-title"></h1>
+          <p class="detail-address" id="property-place"></p>
+          <div class="detail-highlights" id="property-highlights"></div>
+          <section class="description-section">
+            <h2>Sobre este imóvel</h2>
+            <p id="property-description"></p>
+          </section>
+          <section class="features-section">
+            <h2>O que este imóvel oferece</h2>
+            <div id="property-features" class="detail-feature-list"></div>
+          </section>
+          <section class="location-section">
+            <h2>Localização</h2>
+            <p id="location-text"></p>
+            <div class="map-placeholder">
+              <span>⌖</span><b id="map-label"></b
+              ><small
+                >Consulte nossa equipe para mais detalhes sobre a
+                localização.</small
+              >
+            </div>
+          </section>
+        </article>
+        <aside class="contact-card">
+          <span class="eyebrow">FALE COM A MORADA</span>
+          <div class="detail-price" id="property-price"></div>
+          <p class="contact-intro">
+            Gostou deste imóvel? Envie seus dados e nossa equipe entrará em
+            contato.
+          </p>
+          <form id="interest-form">
+            <label
+              >Seu nome<input
+                name="name"
+                autocomplete="name"
+                placeholder="Como podemos chamar você?"
+                required /></label
+            ><label
+              >E-mail<input
+                name="email"
+                type="email"
+                autocomplete="email"
+                placeholder="voce@email.com"
+                required /></label
+            ><label
+              >Telefone<input
+                name="phone"
+                type="tel"
+                autocomplete="tel"
+                placeholder="(11) 99999-9999"
+                required /></label
+            ><label class="visit-choice"
+              ><input type="checkbox" name="requestVisit" /> Quero agendar uma
+              visita</label
+            ><button type="submit" class="primary-button">
+              Tenho interesse <span>↗</span>
+            </button>
+            <p class="form-feedback" id="form-feedback" aria-live="polite"></p>
+          </form>
+          <div class="contact-assurance">
+            Seus dados são usados apenas para responder ao seu contato.
+          </div>
+        </aside>
+      </div>
+      <section class="more-properties">
+        <div>
+          <span class="eyebrow">CONTINUE EXPLORANDO</span>
+          <h2>Talvez você também goste.</h2>
+        </div>
+        <a class="text-link" href="index.html#imoveis">Ver outros imóveis ↗</a>
+      </section>
+    </main>
+    <footer>
+      <a class="brand" href="index.html"
+        ><span class="brand-mark">m</span> Terra &amp; Imóveis<span
+          class="brand-dot"
+          >.</span
+        ></a
+      ><span>Seu próximo capítulo começa aqui.</span
+      ><span>© 2026 Terra &amp; Imóveis</span>
+    </footer>
+    <script src="store.js"></script>
+    <script src="detail.js"></script>
+  </body>
+</html>

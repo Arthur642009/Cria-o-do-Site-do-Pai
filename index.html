@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f7f5f0" />
+    <title>Morada — encontre seu próximo lugar</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="commerce.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="index.html" aria-label="Morada, página inicial"
+        ><span class="brand-mark">TM</span> Terra & Imóveis<span
+          class="brand-dot"
+          >.</span
+        ></a
+      >
+      <nav class="main-nav" aria-label="Navegação principal">
+        <a class="active" href="#imoveis">Comprar</a
+        ><a href="#imoveis">Alugar</a><a href="#sobre">Sobre nós</a>
+      </nav>
+      <a class="login-link" href="login.html"
+        ><span class="user-icon"></span> Entrar <span class="arrow">↗</span></a
+      >
+    </header>
+    <main>
+      <section class="hero">
+        <div class="hero-copy">
+          <span class="eyebrow"><i></i> UM NOVO JEITO DE MORAR</span>
+          <h1>O lugar certo<br />muda <em>tudo.</em></h1>
+          <p>
+            Encontre um espaço com a sua cara. Seu próximo capítulo começa com
+            uma boa escolha.
+          </p>
+        </div>
+        <div class="hero-image">
+          <img
+            src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1500&q=85"
+            alt="Sala contemporânea iluminada e acolhedora"
+          /><span class="image-note">Uma casa é feita de momentos.</span>
+          <div class="image-count">01 <span>/ 04</span></div>
+        </div>
+        <div class="search-card">
+          <div class="search-tabs">
+            <button class="tab active" data-mode="Comprar">Comprar</button
+            ><button class="tab" data-mode="Alugar">Alugar</button>
+          </div>
+          <form id="search-form">
+            <label class="search-field"
+              ><span>Onde você quer morar?</span
+              ><span class="field-input"
+                ><span class="pin">⌖</span
+                ><input
+                  id="location"
+                  placeholder="Cidade, bairro ou endereço" /></span></label
+            ><label class="search-field"
+              ><span>Tipo de imóvel</span
+              ><span class="field-input"
+                ><select id="type">
+                  <option value="">Todos os tipos</option>
+                  <option>Apartamento</option>
+                  <option>Casa</option>
+                  <option>Cobertura</option>
+                </select></span
+              ></label
+            ><label class="search-field price-field"
+              ><span>Faixa de preço</span
+              ><span class="field-input"
+                ><select id="price">
+                  <option value="">Qualquer valor</option>
+                  <option value="500000">Até R$ 500 mil</option>
+                  <option value="1000000">Até R$ 1 milhão</option>
+                  <option value="2000000">Até R$ 2 milhões</option>
+                </select></span
+              ></label
+            ><button class="search-button" aria-label="Buscar imóveis">
+              ⌕
+            </button>
+          </form>
+        </div>
+      </section>
+      <section class="featured section-wrap" id="imoveis">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">ESCOLHAS COM INTENÇÃO</span>
+            <h2>Espaços que inspiram.</h2>
+          </div>
+          <a class="text-link" href="#imoveis"
+            >Ver todos os imóveis <span>↗</span></a
+          >
+        </div>
+        <div class="listing-meta">
+          <span id="result-count">03 imóveis selecionados para você</span
+          ><span>São Paulo, SP <span class="muted">⌖</span></span>
+        </div>
+        <div class="property-grid" id="property-grid"></div>
+      </section>
+      <section class="about" id="sobre">
+        <div class="about-mark">m.</div>
+        <div>
+          <span class="eyebrow">MAIS QUE UM ENDEREÇO</span>
+          <h2>Um lugar para<br />chamar de <em>seu.</em></h2>
+        </div>
+        <p>
+          Acreditamos que encontrar um imóvel deve ser tão especial quanto viver
+          nele. Estamos aqui para deixar cada etapa mais simples.
+        </p>
+        <a href="login.html" class="about-cta"
+          >Encontre seu lugar <span>↗</span></a
+        >
+      </section>
+    </main>
+    <footer>
+      <a class="brand" href="index.html"
+        ><span class="brand-mark">m</span> Terra & Imóveis<span
+          class="brand-dot"
+          >.</span
+        ></a
+      ><span>Seu próximo capítulo começa aqui.</span
+      ><span>© 2025 Morada Imóveis</span>
+    </footer>
+    <script src="store.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

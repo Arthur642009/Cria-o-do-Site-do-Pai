@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#f7f5f0" />
+    <title>Painel administrativo — Morada</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="commerce.css" />
+  </head>
+  <body class="admin-page">
+    <aside class="sidebar">
+      <a class="brand" href="index.html"
+        ><span class="brand-mark">m</span> morada<span class="brand-dot"
+          >.</span
+        ></a
+      >
+      <div class="side-label">MENU PRINCIPAL</div>
+      <a class="side-link selected" href="admin.html"
+        ><span>▦</span> Visão geral</a
+      ><a class="side-link" href="#admin-listings"
+        ><span>⌂</span> Imóveis <b>12</b></a
+      ><a class="side-link" href="#leads"
+        ><span>♧</span> Contatos <b class="notice">4</b></a
+      ><a class="side-link" href="#settings"><span>⚙</span> Configurações</a>
+      <div class="sidebar-bottom">
+        <div class="help-card">
+          <span>Precisa de ajuda?</span>
+          <p>Fale com nosso time de suporte.</p>
+          <a href="mailto:suporte@morada.com.br">Falar com suporte ↗</a>
+        </div>
+        <a class="side-link logout" href="#" id="logout"
+          ><span>↪</span> Sair da conta</a
+        >
+      </div>
+    </aside>
+    <main class="admin-main">
+      <header class="admin-top">
+        <span class="breadcrumb">Painel <span>/</span> Visão geral</span>
+        <div class="admin-user">
+          <span class="notification">♧<i></i></span><span class="avatar">M</span
+          ><span
+            ><b id="admin-name">Equipe Morada</b
+            ><small>Administrador</small></span
+          ><span class="chevron">⌄</span>
+        </div>
+      </header>
+      <section class="admin-content">
+        <div class="welcome-row">
+          <div>
+            <span class="eyebrow">SEGUNDA-FEIRA, 24 DE MARÇO DE 2025</span>
+            <h1>Bom dia, <em>equipe.</em></h1>
+            <p>Aqui está o resumo da sua imobiliária hoje.</p>
+          </div>
+          <button class="primary-button add-property" id="add-property">
+            ＋ &nbsp; Adicionar imóvel
+          </button>
+        </div>
+        <div class="stats-grid">
+          <article class="stat-card">
+            <div class="stat-top">
+              <span>Imóveis ativos</span><span class="stat-icon">⌂</span>
+            </div>
+            <strong id="stat-properties">0</strong
+            ><small><i>↗ 12%</i> em relação ao mês passado</small>
+          </article>
+          <article class="stat-card">
+            <div class="stat-top">
+              <span>Contatos recebidos</span><span class="stat-icon">♧</span>
+            </div>
+            <strong id="stat-contacts">0</strong
+            ><small><i>↗ 8%</i> em relação ao mês passado</small>
+          </article>
+          <article class="stat-card">
+            <div class="stat-top">
+              <span>Visitas agendadas</span><span class="stat-icon">▦</span>
+            </div>
+            <strong id="stat-visits">0</strong
+            ><small><i>↗ 4%</i> em relação ao mês passado</small>
+          </article>
+          <article class="stat-card">
+            <div class="stat-top">
+              <span>Visualizações</span><span class="stat-icon">◉</span>
+            </div>
+            <strong id="stat-views">0</strong
+            ><small><i>↗ 16%</i> em relação ao mês passado</small>
+          </article>
+        </div>
+        <section class="admin-listings" id="admin-listings">
+          <div class="admin-section-heading">
+            <div>
+              <h2>Imóveis recentes</h2>
+              <p>Acompanhe os anúncios mais recentes da sua carteira.</p>
+            </div>
+            <a href="#admin-listings">Ver todos <span>↗</span></a>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>IMÓVEL</th>
+                  <th>LOCALIZAÇÃO</th>
+                  <th>PREÇO</th>
+                  <th>STATUS</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody id="admin-property-rows"></tbody>
+            </table>
+          </div>
+        </section>
+        <div class="admin-bottom">
+          <section id="leads" class="leads-card">
+            <div class="admin-section-heading">
+              <div>
+                <h2>Últimos contatos</h2>
+                <p>Pessoas interessadas nos seus imóveis.</p>
+              </div>
+              <a href="#leads">Ver todos <span>↗</span></a>
+            </div>
+            <div class="lead">
+              <span class="lead-avatar peach">AC</span
+              ><span
+                ><b>Ana Carolina</b
+                ><small>Apartamento Vila Madalena</small></span
+              ><time>Há 12 min</time>
+            </div>
+            <div class="lead">
+              <span class="lead-avatar green">RM</span
+              ><span><b>Rafael Mendes</b><small>Casa Jardim Europa</small></span
+              ><time>Há 38 min</time>
+            </div>
+            <div class="lead">
+              <span class="lead-avatar lilac">LS</span
+              ><span><b>Luiza Santos</b><small>Cobertura Pinheiros</small></span
+              ><time>Há 1 hora</time>
+            </div>
+          </section>
+          <section class="tip-card">
+            <span class="tip-icon">✳</span
+            ><span class="eyebrow">DICA DA MORADA</span>
+            <h2>Um bom anúncio<br />faz a diferença.</h2>
+            <p>Imóveis com fotos profissionais recebem até 3x mais contatos.</p>
+            <a href="#admin-listings">Melhorar meus anúncios ↗</a>
+          </section>
+        </div>
+      </section>
+    </main>
+    <script src="store.js"></script>
+    <script src="admin.js"></script>
+  </body>
+</html>

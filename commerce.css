@@ -1,0 +1,248 @@
+.property-card {
+  position: relative;
+}
+.property-open {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  text-align: left;
+  color: inherit;
+  cursor: pointer;
+}
+.property-open:focus-visible,
+.favorite:focus-visible {
+  outline: 2px solid #587561;
+  outline-offset: 3px;
+}
+.favorite {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  border: 0;
+  cursor: pointer;
+  z-index: 1;
+}
+.favorite.is-favorite {
+  color: #a54f4b;
+}
+.empty-properties,
+.empty-admin {
+  padding: 22px;
+  color: #7c827d;
+  font-size: 13px;
+}
+.delete-property {
+  border: 1px solid #ead9d7;
+  background: #fff;
+  color: #a54f4b;
+  border-radius: 3px;
+  padding: 7px 10px;
+  font-size: 11px;
+  cursor: pointer;
+}
+.delete-property:hover {
+  background: #fbf1ef;
+}
+.property-dialog,
+.admin-dialog {
+  border: 0;
+  padding: 0;
+  width: min(700px, calc(100vw - 30px));
+  max-height: calc(100vh - 32px);
+  overflow: auto;
+  background: #fff;
+  color: var(--ink);
+  box-shadow: 0 25px 90px #17231b42;
+}
+.property-dialog::backdrop,
+.admin-dialog::backdrop {
+  background: #1b2720a8;
+  backdrop-filter: blur(3px);
+}
+.dialog-close {
+  position: absolute;
+  right: 15px;
+  top: 12px;
+  width: 36px;
+  height: 36px;
+  border: 0;
+  border-radius: 50%;
+  background: #fff;
+  color: #36443a;
+  font-size: 25px;
+  line-height: 1;
+  cursor: pointer;
+  z-index: 1;
+  box-shadow: 0 2px 12px #0002;
+}
+.dialog-image {
+  display: block;
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+}
+.dialog-content {
+  padding: 25px 30px 30px;
+}
+.dialog-content h2,
+.admin-dialog h2 {
+  font: 600 27px var(--display);
+  letter-spacing: -0.8px;
+  margin: 9px 0;
+}
+.dialog-price {
+  color: var(--green);
+  font: 700 20px var(--display);
+}
+.dialog-content > p {
+  font-size: 13px;
+  line-height: 1.7;
+  color: #747d75;
+}
+.interest-form {
+  border-top: 1px solid var(--line);
+  margin-top: 20px;
+  padding-top: 18px;
+}
+.interest-form h3 {
+  font: 600 16px var(--display);
+  margin: 0 0 13px;
+}
+.interest-fields {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.interest-fields input,
+.admin-form-grid input,
+.admin-form-grid select,
+.admin-form-grid textarea {
+  width: 100%;
+  min-width: 0;
+  border: 1px solid #e2e4df;
+  border-radius: 2px;
+  background: white;
+  padding: 11px 12px;
+  outline: none;
+  font-size: 12px;
+  color: var(--ink);
+}
+.interest-fields input:first-child {
+  grid-column: 1/3;
+}
+.interest-fields input:focus,
+.admin-form-grid input:focus,
+.admin-form-grid select:focus,
+.admin-form-grid textarea:focus {
+  border-color: #728b79;
+}
+.visit-choice {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  font-size: 12px;
+  color: #68736b;
+  margin: 13px 0;
+}
+.visit-choice input {
+  accent-color: var(--green);
+}
+.interest-form .primary-button {
+  max-width: 260px;
+}
+.form-feedback {
+  font-size: 12px;
+  color: var(--green);
+  line-height: 1.5;
+  min-height: 0;
+}
+.admin-dialog {
+  width: min(650px, calc(100vw - 30px));
+}
+.admin-dialog > form {
+  padding: 31px;
+}
+.admin-dialog .eyebrow {
+  font-size: 9px;
+}
+.admin-form-intro {
+  font-size: 12px;
+  color: #7d857e;
+  margin: 0 0 22px;
+}
+.admin-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+.admin-form-grid label {
+  display: grid;
+  gap: 7px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #5c665e;
+}
+.admin-form-grid .wide-field {
+  grid-column: 1/3;
+}
+.admin-form-grid textarea {
+  resize: vertical;
+}
+.admin-form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 21px;
+}
+.admin-form-actions .primary-button {
+  width: auto;
+  min-width: 170px;
+}
+.secondary-button {
+  padding: 0 17px;
+  border: 1px solid #dfe3dd;
+  background: white;
+  color: #657067;
+  border-radius: 2px;
+  cursor: pointer;
+  font-size: 12px;
+}
+.contact-count {
+  font-size: 10px;
+  color: #829087;
+}
+@media (max-width: 620px) {
+  .dialog-image {
+    height: 190px;
+  }
+  .dialog-content {
+    padding: 20px;
+  }
+  .interest-fields {
+    grid-template-columns: 1fr;
+  }
+  .interest-fields input:first-child {
+    grid-column: auto;
+  }
+  .admin-dialog > form {
+    padding: 25px 18px;
+  }
+  .admin-form-grid {
+    grid-template-columns: 1fr;
+  }
+  .admin-form-grid .wide-field {
+    grid-column: auto;
+  }
+  .admin-form-actions .primary-button {
+    min-width: 0;
+  }
+  .admin-form-actions {
+    justify-content: stretch;
+  }
+  .admin-form-actions > * {
+    flex: 1;
+    min-height: 44px;
+  }
+}
